@@ -9,14 +9,14 @@ countries = df['Entity']
 countries = set(countries)
 countries
 
-gdp2000 = df[df['Year'] == 2012]
-gdp2000 = pd.DataFrame(gdp2000, columns=['Entity', 'Year', 'Real GDP per capita in 2011US$, multiple benchmarks (Maddison Project Database (2018))', 'Life expectancy'])
-gdp2000.dropna(subset=['Real GDP per capita in 2011US$, multiple benchmarks (Maddison Project Database (2018))'], inplace=True)
-gdp2000.dropna(subset=['Life expectancy'], inplace=True)
-gdp2000
+gdp2012 = df[df['Year'] == 2012]
+gdp2012 = pd.DataFrame(gdp2012, columns=['Entity', 'Year', 'Real GDP per capita in 2011US$, multiple benchmarks (Maddison Project Database (2018))', 'Life expectancy'])
+gdp2012.dropna(subset=['Real GDP per capita in 2011US$, multiple benchmarks (Maddison Project Database (2018))'], inplace=True)
+gdp2012.dropna(subset=['Life expectancy'], inplace=True)
+gdp2012
 
-x = gdp2000['Real GDP per capita in 2011US$, multiple benchmarks (Maddison Project Database (2018))']
-y = gdp2000['Life expectancy']
+x = gdp2012['Real GDP per capita in 2011US$, multiple benchmarks (Maddison Project Database (2018))']
+y = gdp2012['Life expectancy']
 
 plt.scatter(x, y)
 plt.xlim(0, 50000)
